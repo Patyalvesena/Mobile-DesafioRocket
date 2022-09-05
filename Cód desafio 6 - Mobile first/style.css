@@ -1,0 +1,170 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root {
+font-size: 62.5%;
+
+--fs-header: clamp(2rem, 4rem, 5rem);
+--fs-main: clamp(1.6rem, 2rem, 3rem);
+--fs-p: clamp(1.0rem, 1.7rem, 3rem);
+
+--width-page: clamp(30rem, 40rem, 70rem);
+
+--backg-header:hsla(218, 17%, 62%, 1);
+--backg-header-h1: hsla(275, 18%, 79%, 1);
+--backg-body: hsla(233, 100%, 97%, 1);
+--backg-button: hsla(312, 91%, 96%, 1);
+
+--fc-header: hsla(0, 0%, 100%, 1);
+--fc-body:hsla(274, 84%, 12%, 1);
+--fc-button: hsla(232, 17%, 35%, 1);
+
+--fontf-p: 'Palanquin', sans-serif;
+--fontf-body: 'Staatliches', cursive;
+}
+
+body {
+    width: 38.rem;
+    background: var(--backg-body);
+
+   
+}
+
+.page {
+    margin: 0 auto;
+    text-align: center;
+    min-width: var(--width-page);
+   
+}
+
+header {
+    padding-top: 3.2rem;
+    background: var(--backg-header);
+    min-width: 38.4rem;
+    height: 279px;
+}
+
+.space {
+    background: var(--backg-header-h1);    
+    width: 100%;
+    height: 4.9rem;
+    margin-bottom: 2.9rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.space h1 {
+    font-family: var(--fontf-body);
+    font-size: var(--fs-header);
+    color: var(--fc-header);
+    font-weight: 400;
+    width: 21.1rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+
+main {
+    min-width: 3.2rem;
+    margin: 0;
+    padding: 1.4rem 6.0rem 3.2rem ;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.6rem; 
+}
+
+main p {
+    font-family: var(--fontf-p);
+    color: var(--fc-body);
+    font-size: var(--fs-p);
+
+    width: 30.5rem;
+    height: 7.5rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin-bottom: 2.7rem 
+}
+
+.cards { 
+    width: 32.0rem;
+    height: auto;
+    position: relative;
+  
+}
+
+
+.cards img {
+    object-fit: cover;
+    border-radius: 6px;
+
+    animation: action 2s ease-in 200ms normal backwards;
+}
+
+
+.cards button {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+
+    width: 11.2re; 
+    height: 3.5rem;
+    
+    background: var(--backg-button);
+    font-family: var(--fontf-body);
+    font-size: var(--fs-main);
+    color: var(--fc-button);
+
+    
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 3.4rem;
+    letter-spacing: 0.05rem;
+    padding: 1rem 2.3rem 1rem 2.4rem ;
+    
+    border: none;
+    border-radius: 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    
+    animation: action2 6s ease-in reverse;
+}
+    
+@keyframes action {
+    to { 
+        opacity: 1;
+        transform: translatey(-20px);
+    }
+
+    from {
+        opacity: 0;
+        transform: translatey(0);
+    }
+}
+
+
+@keyframes action2 {
+    0%{ 
+       
+    }
+
+    50% {
+        opacity: 0;
+        transform: translatey(-15px)
+    }
+
+    100% {
+        opacity: 0;
+        transform: translatey(0);
+    }
+}
